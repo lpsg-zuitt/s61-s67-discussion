@@ -11,13 +11,19 @@
   //To be able to add a component into another component, in the script block, import the component
   //The name of the component is the name of the file by default.
   // Add export default {} to be able to add imported component in the root component
-    import BannerComponent from './components/BannerComponent.vue';
     import NavbarComponent from './components/NavbarComponent.vue';
+  /* ACTIVITY SOLUTION START */
+  import HomePage from './pages/HomePage.vue';
+  import CoursesPage from './pages/CoursesPage.vue';
+  /* ACTIVITY SOLUTION END */
 
     export default {
       components: {
-        BannerComponent,
-        NavbarComponent
+        NavbarComponent,
+      /* ACTIVITY SOLUTION START */
+        HomePage,
+        CoursesPage
+      /* ACTIVITY SOLUTION END */
       }
     }
 </script>
@@ -27,7 +33,10 @@
 
   <NavbarComponent />
   <!-- The Banner component can be rendered in the page after import as its own html-like tag. -->
-  <BannerComponent />
+  <!-- ACTIVITY SOLUTION START -->
+  <HomePage />
+  <CoursesPage />
+  <!-- ACTIVITY SOLUTION END -->
 </template>
 
 <style scoped>
